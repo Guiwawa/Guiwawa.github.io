@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        初次体验vue之vue留言板 | 娃娃_blog
+        vue+jsonp实现神奇的搜索框 | 娃娃_blog
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://Guiwawa.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="初次体验vue之vue留言板 | 娃娃_blog">
+    <meta property="og:title" content="vue+jsonp实现神奇的搜索框 | 娃娃_blog">
     <meta property="og:description" content="求知若饥，谦虚若愚">
     
      <!--[if lte IE 9]>
@@ -212,7 +212,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#vue初尝"><span class="post-toc-number">1.</span> <span class="post-toc-text">vue初尝</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#使用vue常用指令制作留言板"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">使用vue常用指令制作留言板</span></a></li></ol></li></ol>
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#这是一个神奇的搜索框demo"><span class="post-toc-number">1.</span> <span class="post-toc-text">这是一个神奇的搜索框demo</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#用到的技术点"><span class="post-toc-number">1.0.1.</span> <span class="post-toc-text">用到的技术点</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#原理"><span class="post-toc-number">1.0.2.</span> <span class="post-toc-text">原理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#实现步骤"><span class="post-toc-number">1.0.3.</span> <span class="post-toc-text">实现步骤</span></a></li></ol></li></ol></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -235,7 +235,7 @@
 		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/vue01.png)">
 	
         <p class="article-headline-p">
-            初次体验vue之vue留言板
+            vue+jsonp实现神奇的搜索框
         </p>
     </div>
 
@@ -253,7 +253,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>秦晓飞</strong>
-        <span>4月 07, 2017</span>
+        <span>4月 08, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -288,21 +288,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=初次体验vue之vue留言板&url=https://Guiwawa.github.io//2017/04/07/初次体验vue之vue留言板/index.html&via=秦晓飞" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=vue+jsonp实现神奇的搜索框&url=https://Guiwawa.github.io//2017/04/08/vue-jsonp实现神奇的搜索框/index.html&via=秦晓飞" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=https://Guiwawa.github.io//2017/04/07/初次体验vue之vue留言板/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=https://Guiwawa.github.io//2017/04/08/vue-jsonp实现神奇的搜索框/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=初次体验vue之vue留言板&url=https://Guiwawa.github.io//2017/04/07/初次体验vue之vue留言板/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=vue+jsonp实现神奇的搜索框&url=https://Guiwawa.github.io//2017/04/08/vue-jsonp实现神奇的搜索框/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -314,7 +314,24 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h1 id="vue初尝"><a href="#vue初尝" class="headerlink" title="vue初尝"></a>vue初尝</h1><h2 id="使用vue常用指令制作留言板"><a href="#使用vue常用指令制作留言板" class="headerlink" title="使用vue常用指令制作留言板"></a>使用vue常用指令制作留言板</h2><p>选择框架的时候，一直不知道选择哪个，最终vue得到了我的青睐，我也很喜欢vue因为他具有轻量，简单，灵活，高效等特点，而且作为mvvm框架中的一员他的受宠度也是很高的！<br>废话不多说，进入正题，其实学过angular的小白再学习vue是很简单的，通过今天初次体验vue，自己尝试着做了一个小的案例,其实原理就是todolist（学过angular的应该不陌生对todolist）的原理。<br>这个小案例是结合bootstarp来做的，通过bootstarp布局比较美观，在用vue进行数据的双向绑定，最后渲染在视图上面，就形成了所谓的留言板，留言板的<a href="http://guiwawa.github.io/mygit/Vuejs/vue_todolist/index.html">demo</a>点击demo,源码地址<a href="https://github.com/Guiwawa/mygit/tree/master/Vuejs/vue_todolist" target="_blank" rel="external">源码</a>点击源码。</p>
+		<h1 id="这是一个神奇的搜索框demo"><a href="#这是一个神奇的搜索框demo" class="headerlink" title="这是一个神奇的搜索框demo"></a>这是一个神奇的搜索框<a href="http://guiwawa.github.io/mygit/Vuejs/vue+jsonp/index.html">demo</a></h1><h3 id="用到的技术点"><a href="#用到的技术点" class="headerlink" title="用到的技术点"></a>用到的技术点</h3><ul>
+<li>vue</li>
+<li>jsonp</li>
+<li>vue-resouce  <h3 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h3><strong>使用jsonp跨域请求数据，这个小demo中我跨的是百度，你也可以跨其他的网站（任何网站），把请求到的数据添加到视图（页面），然后添加其他功能。</strong> </li>
+</ul>
+<h3 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h3><ul>
+<li>引入vue.js<br><code>k&lt;script src=&quot;./js/vue.js&quot;&gt;&lt;/script&gt;</code>  </li>
+<li>引入vue-resouce.js<br><code>k&lt;script src=&quot;./js/vue-resouce.js&quot;&gt;&lt;/script&gt;</code>  </li>
+<li>写html代码<br>核心代码就只有一个搜索框,使用vue的数据双向绑定和几个键盘事件<br><code>k&lt;input type=&quot;text&quot; v-model=&quot;t1&quot; @keyup=&quot;get($event)&quot; @keydown.down=&quot;chengDown()&quot; @keydown.up.prevent=&quot;chengUp()&quot; placeholder=&quot;请输入你想搜的内容&quot; class=&quot;inputBox&quot;&gt;</code></li>
+</ul>
+<ul>
+<li>写js代码<br><a href="https://github.com/Guiwawa/mygit/blob/master/Vuejs/vue%2Bjsonp/index.html" target="_blank" rel="external">源码地址</a>  </li>
+<li>给选中的内容添加高亮<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">.gray&#123;</div><div class="line">          background-color: gray;</div><div class="line">        &#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<blockquote>
+<p>想要更美观可以添加其他样式或者使用bootstrap让样式更美观</p>
+</blockquote>
 
 	
 	
@@ -343,9 +360,9 @@
 <div id="comments">
     <!-- 多说评论框 start -->
         <div class="ds-thread" 
-            data-thread-key="2017/04/07/初次体验vue之vue留言板/" 
-            data-url="https://Guiwawa.github.io/2017/04/07/初次体验vue之vue留言板/"
-            data-title="初次体验vue之vue留言板"></div>
+            data-thread-key="2017/04/08/vue-jsonp实现神奇的搜索框/" 
+            data-url="https://Guiwawa.github.io/2017/04/08/vue-jsonp实现神奇的搜索框/"
+            data-title="vue+jsonp实现神奇的搜索框"></div>
     <!-- 多说评论框 end -->
 </div>
 
@@ -359,21 +376,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2017/04/08/vue-jsonp实现神奇的搜索框/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2017/04/01/js闭包那点事儿/" id="post_nav-older" class="next-content">
+        <a href="/2017/04/07/初次体验vue之vue留言板/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
