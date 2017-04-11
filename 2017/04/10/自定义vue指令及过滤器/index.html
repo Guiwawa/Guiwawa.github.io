@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        标签: web | 娃娃_blog
+        vue自定义过滤器及指令 | 娃娃_blog
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="https://Guiwawa.github.io">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: web | 娃娃_blog">
+    <meta property="og:title" content="vue自定义过滤器及指令 | 娃娃_blog">
     <meta property="og:description" content="求知若饥，谦虚若愚">
     
      <!--[if lte IE 9]>
@@ -189,98 +189,200 @@
                 </button>
 				
 				
-                <!-- Index Module -->
-<div class="material-index mdl-grid">
-	
-    <div class="locate-thumbnail-symbol"></div>
+                <!-- Post TOC -->
+
     
-    
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义vue过滤器及指令"><span class="post-toc-number">1.</span> <span class="post-toc-text">自定义vue过滤器及指令</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#vue自定义过滤器"><span class="post-toc-number">2.</span> <span class="post-toc-text">vue自定义过滤器</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#自定义指令"><span class="post-toc-number">3.</span> <span class="post-toc-text">自定义指令</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#自定义元素指令"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">自定义元素指令</span></a></li></ol></li></ol>
 		
-			<!-- Paradox Thumbnail -->
-        	<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    
-    <!-- Post Thumbnail -->
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
 	
-		
-			<!-- Random Thumbnail -->
-			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-		
+		<!-- Custom Thumbnail -->
+		<div class="post_thumbnail-custom mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/vue01.png)">
 	
+        <p class="article-headline-p">
+            vue自定义过滤器及指令
+        </p>
+    </div>
+
+	
+
 				
-		<!-- Post Title -->
-		<p class="article-headline-p"><a href="/2016/05/01/hello-前端/">hello_前端</a></p>
-	</div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-            前端！你好
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/05/01/hello-前端/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/img/avatar.png" width="44px" height="44px" alt="秦晓飞's avatar">
-            </div>
-            <div>
-                <strong>秦晓飞</strong>
-                <span>5月 01, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-            
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="2016/05/01/hello-前端/" data-count-type="comments"></span>
-                </span>
-            
-            
-            <!-- Post Views -->
-            <span class="post_entry-views">
-                
-            </span>
-        </div>
-    </div>
-            
-</div>
-
-		
-		
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
     
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>秦晓飞</strong>
+        <span>4月 10, 2017</span>
+    </div>
     
+    <div class="section-spacer"></div>
 	
-		<script>
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
     
-    var randomNum;
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/vue/">vue</a>
+    </ul>
     
-    var locatePost = $(".locate-thumbnail-symbol").next();
-    for(var i=0; i < 10; i++){
-        
-        randomNum = Math.floor(Math.random() * 5 + 1);
-        
-        locatePost.children(".post_thumbnail-random").attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children(".post_thumbnail-random").css('background-image', 'url(' + '/img/random/' + randomNum + '.png' + ')')
-        
-        locatePost = locatePost.next();
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    
+    
+    
+    
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=vue自定义过滤器及指令&url=https://Guiwawa.github.io//2017/04/10/自定义vue指令及过滤器/index.html&via=秦晓飞" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+    
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=https://Guiwawa.github.io//2017/04/10/自定义vue指令及过滤器/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+    
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=vue自定义过滤器及指令&url=https://Guiwawa.github.io//2017/04/10/自定义vue指令及过滤器/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+</ul>
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<h2 id="自定义vue过滤器及指令"><a href="#自定义vue过滤器及指令" class="headerlink" title="自定义vue过滤器及指令"></a>自定义vue过滤器及指令</h2><h2 id="vue自定义过滤器"><a href="#vue自定义过滤器" class="headerlink" title="vue自定义过滤器"></a>vue自定义过滤器</h2><p>学过angular的宝宝应该对过滤器并不陌生，首先先来说下angular自定义过滤器，他使用的是filter方法。传入两个参数，第一个是过滤器的名字，第二个回调函数。<br>同样的vue的自定义过滤器也是使用filter方法，通过Vue调用。使用方法也是通过|<name>的形式。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">Vue.filter(&quot;name&quot;,callBack);</div><div class="line">&lt;div&gt;&#123;&#123;msg|name&#125;&#125;&lt;/div&gt;</div></pre></td></tr></table></figure></name></p>
+<p>例如，创建一个date（年-月-日 时：分：秒）的过滤器<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">Vue.filter(&quot;date&quot;,function(input)&#123;//input就是传过来的msg</div><div class="line">    var oDate=new Date(input);</div><div class="line">    return oDate.getFullYear()+&quot;-&quot;+(oDate.getMonth()+1)+&quot;-&quot;+oDate.getDate()+&quot; &quot;+oDate.getHours()+&quot;:&quot;+oDate.getMinutes()+&quot;:&quot;+oDate.getSeconds();</div><div class="line">&#125;);</div><div class="line">var vm=new Vue(&#123;</div><div class="line">    el:&quot;body&quot;,</div><div class="line">    a:Date.now();//时间戳</div><div class="line">&#125;);</div><div class="line">------------------</div><div class="line">//html部分</div><div class="line">&lt;div&gt;&#123;&#123;a|date&#125;&#125;&lt;div&gt;</div></pre></td></tr></table></figure></p>
+<p>一个时间过滤器这么简单就创建成功了！如果有其他需求可以在回调函数里添加逻辑代码，变成符合要求的过滤器！</p>
+<h2 id="自定义指令"><a href="#自定义指令" class="headerlink" title="自定义指令"></a>自定义指令</h2><p>是的！和angular中一样自定义指令用的是directive方法，用法基本相同<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Vue.directive(&quot;name&quot;,callBack);</div><div class="line">   //html部分</div><div class="line">&lt;div v-name&gt;&lt;/div&gt;//注意这里name前面必须加v-，而自定义的时候不用加。</div></pre></td></tr></table></figure></p>
+<p>例如，自定义一个v-red指令，当使用这个指令时让该元素的背景颜色变为红色<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">Vue.directive(&quot;red&quot;,function()&#123;</div><div class="line">    this.el.style.background=&quot;red&quot;;</div><div class="line">&#125;)</div><div class="line">//html部分</div><div class="line">&lt;div v-red&gt;我是一个div&lt;/div&gt;</div></pre></td></tr></table></figure></p>
+<p>自定义v-red指令就成功了!</p>
+<h3 id="自定义元素指令"><a href="#自定义元素指令" class="headerlink" title="自定义元素指令"></a>自定义元素指令</h3><p>就是调用elementDirective方法，第一个参数是自定义的元素名字，第二个对象，和自定义指令稍有不同。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">Vue.elementDirective(&quot;name&quot;,&#123;</div><div class="line">    bind:function()&#123;</div><div class="line">        this.el.style.background=&quot;blue&quot;;//使用这个元素时，背景变为蓝色</div><div class="line">    &#125;</div><div class="line">&#125;)</div><div class="line">//html部分</div><div class="line">&lt;name&gt;我是自定义元素中的内容&lt;/name&gt;</div></pre></td></tr></table></figure></p>
+<p>如果行自定义带有某功能的元素，可以这样做哦！</p>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+                    
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
     }
-    
-</script>
-
-	
-
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2017/04/10/自定义vue指令及过滤器/" 
+            data-url="https://Guiwawa.github.io/2017/04/10/自定义vue指令及过滤器/"
+            data-title="vue自定义过滤器及指令"></div>
+    <!-- 多说评论框 end -->
 </div>
+
+
+
+                
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2017/04/08/vue-jsonp实现神奇的搜索框/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
 
 				
 				
@@ -443,6 +545,13 @@ It will not impact the appearance and can give developers a lot of support :)
 
 				
 				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
 				
 				
 				<!--Footer-->
